@@ -1,0 +1,61 @@
+# The Funky King — E-Commerce Website
+
+A premium Gen-Z fashion e-commerce website with an anti-gravity landing effect inspired by Google Anti-Gravity. The site features a green/blue/silver gradient theme, glassmorphism UI, bold typography, and smooth animations.
+
+## Proposed Changes
+
+### File Structure
+
+#### [NEW] [index.html](file:///c:/Users/ankit/Desktop/ai/index.html)
+Complete HTML structure with all sections:
+- **Anti-gravity landing page** — minimal centered layout (brand name + tagline + "Enter Shop" button)
+- **Main site** (hidden initially, revealed after gravity animation):
+  - Sticky navigation bar (Home, Shop, Men, Women, New Arrivals, Contact, Cart with counter badge)
+  - Hero section with bold "The Funky King" branding and CTA
+  - Featured Products grid (6 product cards with image, name, price, "Add to Cart" button)
+  - Categories section (Men, Women, Accessories, New Arrivals cards)
+  - About Brand section with marketing copy
+  - Footer with social media icons and links
+- Reset button to replay the anti-gravity animation
+
+#### [NEW] [styles.css](file:///c:/Users/ankit/Desktop/ai/styles.css)
+All styling using modern CSS:
+- **Design system** — CSS custom properties for the green/blue/silver palette, typography scale, spacing
+- **Animated gradient background** — shifting green-blue-silver gradient via `@keyframes`
+- **Glassmorphism** — `backdrop-filter: blur()` + semi-transparent backgrounds on cards/nav
+- **Anti-gravity animation classes** — falling, rotating, bouncing keyframes applied via JS
+- **Floating particles** — animated pseudo-elements / small circles on the landing page
+- **Product cards** — hover lift/scale effects, image zoom, button glow
+- **Responsive breakpoints** — mobile-first layout, hamburger menu at small screens
+- **Smooth scroll** — `scroll-behavior: smooth`
+- **Typography** — Google Font "Outfit" for bold, modern headings
+
+#### [NEW] [script.js](file:///c:/Users/ankit/Desktop/ai/script.js)
+All interactivity in vanilla JavaScript:
+- **Anti-gravity engine** — after 3s timeout OR "Enter Shop" button click:
+  1. Select all `.gravity-item` elements on the landing page
+  2. Apply randomized `translateY`, `rotate`, and `opacity` transitions to simulate falling
+  3. Add bounce via CSS animation
+  4. After animation (~2s), fade out landing, fade in main shop layout
+- **Floating particles** — create and animate small DOM elements on the landing page
+- **Cart counter** — increment badge number on each "Add to Cart" click, with a small pulse animation
+- **Scroll animations** — IntersectionObserver to fade-in sections as they enter viewport
+- **Sticky navbar shadow** — add shadow class on scroll
+- **Mobile menu toggle** — hamburger icon opens/closes nav links
+- **Reset button** — resets state to show landing page and replay gravity animation
+- **Audio** — play a subtle "whoosh" sound when gravity triggers (using Web Audio API to generate a short synthetic sound, no external file needed)
+
+### Product Images
+Generate 6 product images using the `generate_image` tool to populate the product cards with realistic fashion items (t-shirts, jackets, sneakers, etc.) matching the brand's Gen-Z streetwear aesthetic.
+
+## Verification Plan
+
+### Browser Testing
+1. Open `index.html` in the browser via the browser tool
+2. Verify the anti-gravity landing page loads with floating particles and centered branding
+3. Wait 3 seconds (or click "Enter Shop") and verify gravity fall animation plays
+4. Verify main shop layout appears after animation completes
+5. Click "Add to Cart" buttons and verify cart counter increments
+6. Scroll through all sections and verify scroll-reveal animations
+7. Click "Reset" button and verify the anti-gravity animation replays
+8. Resize viewport and verify responsive layout
