@@ -1,0 +1,23 @@
+# Task Checklist
+
+- [/] Planning
+  - [x] Create task checklist
+  - [x] Define implementation plan
+- [ ] Foundation setup
+  - [ ] Create `index.html` structure (Hero, Nav, Products, Categories, About, Footer)
+  - [ ] Create `style.css` (Glassmorphism, gradients, typography, responsiveness)
+  - [ ] Create `script.js` structure
+- [ ] Physics & Anti-Gravity Implementation
+  - [ ] Write vector and physics engine for falling elements
+  - [ ] Implement collision with floor/bounds and rotation
+  - [ ] Add trigger (3s timer or button click)
+  - [ ] Add reset button functionality
+- [ ] E-Commerce Features & Polish
+  - [ ] Add to cart functionality and counter
+  - [ ] Hover effects and smooth scrolling
+  - [ ] Floating particles/animated background gradient
+  - [ ] Sound effect on gravity trigger
+- [ ] Verification
+  - [ ] Test layout structure
+  - [ ] Test animation performance
+  - [ ] Test responsiveness
